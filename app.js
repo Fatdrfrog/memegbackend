@@ -11,6 +11,9 @@ const sharp = require("sharp");
 const app = express();
 
 dotenv.config();
+
+app.use(express.static("public"));
+
 app.use(express.json(), cors());
 
 const configuration = new Configuration({
